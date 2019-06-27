@@ -1,7 +1,7 @@
 module "aws" {
   source          = "astronomer/astronomer-aws/aws"
-  version         = "1.0.4"
-  # source          = "./terraform-aws-astronomer-aws"
+  version         = "1.0.8"
+  #source          = "./terraform-aws-astronomer-aws"
   deployment_id   = var.deployment_id
   admin_email     = var.email
   route53_domain  = var.route53_domain
@@ -21,7 +21,7 @@ module "aws" {
 # of Helm, the Kubernetes package manager
 module "system_components" {
   source       = "astronomer/astronomer-system-components/kubernetes"
-  version      = "0.0.2"
+  version      = "0.0.3"
   enable_istio = "false"
 }
 

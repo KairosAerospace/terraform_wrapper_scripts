@@ -19,10 +19,10 @@ fi
 terraform init
 
 # deploy EKS, RDS
-terraform apply -var-file=$DIR/terraform.tfvars.sample --target=module.aws --auto-approve
+terraform apply -var-file=$DIR/terraform.tfvars --target=module.aws --auto-approve
 
 # install Tiller in the cluster
-terraform apply -var-file=$DIR/terraform.tfvars.sample --target=module.system_components --auto-approve
+terraform apply -var-file=$DIR/terraform.tfvars --target=module.system_components --auto-approve
 
 # install astronomer in the cluster
-terraform apply -var-file=$DIR/terraform.tfvars.sample --target=module.astronomer --auto-approve
+terraform apply -var-file=$DIR/terraform.tfvars --target=module.astronomer --auto-approve
